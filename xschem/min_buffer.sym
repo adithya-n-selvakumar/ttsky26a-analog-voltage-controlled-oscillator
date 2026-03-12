@@ -1,0 +1,28 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -120 -100 140 0 {}
+L 4 -120 90 140 0 {}
+L 4 -120 -100 -120 90 {}
+L 4 160 0 170 0 {}
+L 4 -140 0 -120 0 {}
+L 7 10 -70 10 -50 {}
+L 7 0 50 0 70 {}
+B 5 7.5 -72.5 12.5 -67.5 {name=VDD dir=inout}
+B 5 -2.5 67.5 2.5 72.5 {name=VSS dir=inout}
+B 5 167.5 -2.5 172.5 2.5 {name=VOUT_BUFFER dir=out}
+B 5 -142.5 -2.5 -137.5 2.5 {name=VIN_BUFFER dir=in}
+A 4 150 0 10 180 360 {}
+T {@symname} -49.5 -6 0 0 0.3 0.3 {}
+T {@name} 85 -42 0 0 0.2 0.2 {}
+T {VDD} 15 -44 0 1 0.2 0.2 {}
+T {VSS} 15 26 0 1 0.2 0.2 {}
+T {VOUT_BUFFER} 115 -4 0 1 0.2 0.2 {}
+T {VIN_BUFFER} -115 -4 0 0 0.2 0.2 {}

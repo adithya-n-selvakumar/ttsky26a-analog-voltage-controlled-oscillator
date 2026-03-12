@@ -1,0 +1,52 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -100 130 -100 {}
+L 4 -130 100 130 100 {}
+L 4 -130 -100 -130 100 {}
+L 4 130 -100 130 100 {}
+L 4 -150 -10 -130 -10 {}
+L 4 -150 10 -130 10 {}
+L 4 130 -50 150 -50 {}
+L 4 130 -70 150 -70 {}
+L 4 130 -30 150 -30 {}
+L 4 130 -90 150 -90 {}
+L 4 130 70 150 70 {}
+L 4 130 50 150 50 {}
+L 4 130 90 150 90 {}
+L 4 130 30 150 30 {}
+L 7 0 -120 0 -100 {}
+L 7 0 100 0 120 {}
+B 5 -152.5 -12.5 -147.5 -7.5 {name=V_BIAS_IMIRROR dir=in}
+B 5 -2.5 -122.5 2.5 -117.5 {name=VDD dir=inout}
+B 5 -152.5 7.5 -147.5 12.5 {name=V_BIAS_TAIL dir=in}
+B 5 -2.5 117.5 2.5 122.5 {name=VSS dir=inout}
+B 5 147.5 -52.5 152.5 -47.5 {name=V_PHASE2_PLUS dir=out}
+B 5 147.5 -72.5 152.5 -67.5 {name=V_PHASE1_PLUS dir=out}
+B 5 147.5 -32.5 152.5 -27.5 {name=V_PHASE3_PLUS dir=out}
+B 5 147.5 -92.5 152.5 -87.5 {name=V_PHASE0_PLUS dir=out}
+B 5 147.5 67.5 152.5 72.5 {name=V_PHASE2_MINUS dir=out}
+B 5 147.5 47.5 152.5 52.5 {name=V_PHASE1_MINUS dir=out}
+B 5 147.5 87.5 152.5 92.5 {name=V_PHASE3_MINUS dir=out}
+B 5 147.5 27.5 152.5 32.5 {name=V_PHASE0_MINUS dir=out}
+T {@symname} -114 -66 0 0 0.3 0.3 {}
+T {@name} -105 48 0 0 0.2 0.2 {}
+T {V_BIAS_IMIRROR} -125 -14 0 0 0.2 0.2 {}
+T {VDD} -4 -95 3 1 0.2 0.2 {}
+T {V_BIAS_TAIL} -125 6 0 0 0.2 0.2 {}
+T {VSS} 4 95 1 1 0.2 0.2 {}
+T {V_PHASE2_PLUS} 125 -54 0 1 0.2 0.2 {}
+T {V_PHASE1_PLUS} 125 -74 0 1 0.2 0.2 {}
+T {V_PHASE3_PLUS} 125 -34 0 1 0.2 0.2 {}
+T {V_PHASE0_PLUS} 125 -94 0 1 0.2 0.2 {}
+T {V_PHASE2_MINUS} 125 66 0 1 0.2 0.2 {}
+T {V_PHASE1_MINUS} 125 46 0 1 0.2 0.2 {}
+T {V_PHASE3_MINUS} 125 86 0 1 0.2 0.2 {}
+T {V_PHASE0_MINUS} 125 26 0 1 0.2 0.2 {}

@@ -1,0 +1,46 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -60 130 -60 {}
+L 4 -130 60 130 60 {}
+L 4 -130 -60 -130 60 {}
+L 4 130 -60 130 60 {}
+L 4 130 30 150 30 {}
+L 4 130 -30 150 -30 {}
+L 4 130 50 150 50 {}
+L 4 130 -50 150 -50 {}
+L 4 -150 -50 -130 -50 {}
+L 4 -150 -30 -130 -30 {}
+L 4 -150 30 -130 30 {}
+L 4 -150 50 -130 50 {}
+L 7 -10 -80 -10 -60 {}
+L 7 -10 60 -10 80 {}
+B 5 -12.5 -82.5 -7.5 -77.5 {name=VDD dir=inout}
+B 5 -12.5 77.5 -7.5 82.5 {name=VSS dir=inout}
+B 5 147.5 27.5 152.5 32.5 {name=V_OUT_MINUS dir=out}
+B 5 147.5 -32.5 152.5 -27.5 {name=V_OUT_PLUS dir=out}
+B 5 147.5 47.5 152.5 52.5 {name=V_OUT_MINUS_BUFFER dir=out}
+B 5 147.5 -52.5 152.5 -47.5 {name=V_OUT_PLUS_BUFFER dir=out}
+B 5 -152.5 -52.5 -147.5 -47.5 {name=V_IN_PLUS dir=in}
+B 5 -152.5 -32.5 -147.5 -27.5 {name=V_IN_MINUS dir=in}
+B 5 -152.5 27.5 -147.5 32.5 {name=V_BIAS_IMIRROR dir=in}
+B 5 -152.5 47.5 -147.5 52.5 {name=V_BIAS_TAIL dir=in}
+T {@symname} -113 -6 0 0 0.3 0.3 {}
+T {@name} 75 -2 0 0 0.2 0.2 {}
+T {VDD} -14 -55 3 1 0.2 0.2 {}
+T {VSS} -6 55 1 1 0.2 0.2 {}
+T {V_OUT_MINUS} 125 26 0 1 0.2 0.2 {}
+T {V_OUT_PLUS} 125 -34 0 1 0.2 0.2 {}
+T {V_OUT_MINUS_BUFFER} 125 46 0 1 0.2 0.2 {}
+T {V_OUT_PLUS_BUFFER} 125 -54 0 1 0.2 0.2 {}
+T {V_IN_PLUS} -125 -54 0 0 0.2 0.2 {}
+T {V_IN_MINUS} -125 -34 0 0 0.2 0.2 {}
+T {V_BIAS_IMIRROR} -125 26 0 0 0.2 0.2 {}
+T {V_BIAS_TAIL} -125 46 0 0 0.2 0.2 {}
