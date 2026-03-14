@@ -55,23 +55,23 @@ node=vp0}
 T {tcleval(Period: [to_eng [xschem raw value PERIOD 0]]
 Vb: [to_eng [xschem raw value vb_avg 0]]V
 Vc: [to_eng [xschem raw value vc_avg 0]]V)} -270 -170 0 0 0.4 0.4 {floater=1}
-N 230 -750 230 -730 {
+N 180 -890 180 -870 {
 lab=GND}
-N 230 -850 230 -810 {
+N 180 -990 180 -950 {
 lab=VSS}
-N 310 -750 310 -730 {
+N 260 -890 260 -870 {
 lab=GND}
-N 230 -730 230 -710 {
+N 180 -870 180 -850 {
 lab=GND}
-N 310 -850 310 -810 {
+N 260 -990 260 -950 {
 lab=VDD}
-N 230 -730 310 -730 {
+N 180 -870 260 -870 {
 lab=GND}
-N -190 -760 -190 -740 {
+N -240 -900 -240 -880 {
 lab=VB_NFET}
-N -190 -740 -150 -740 {
+N -240 -880 -200 -880 {
 lab=VB_NFET}
-N -190 -860 -190 -820 {
+N -240 -1000 -240 -960 {
 lab=VDD}
 C {devices/launcher.sym} -180 -220 0 0 {name=h5
 descr="Load waves!" 
@@ -86,10 +86,10 @@ value="
 .option klu
 .control
 	echo 'i_in period vb_nfet vb_pfet' > vco_characterization_tt_0.txt
-	let i_in_val = 0.025e-3
-	let i_in_step = 0.025e-3
+	let i_in_val = 0.01e-3
+	let i_in_step = 0.01e-3
 
-	while i_in_val <= 0.25e-3
+	while i_in_val <= 0.3e-3
 
 		alterparam i_in = $&i_in_val
 
@@ -109,27 +109,27 @@ value="
 C {devices/launcher.sym} -180 -270 0 0 {name=h1
 descr="Simulate!"
 tclcommand="xschem netlist; xschem simulate"}
-C {devices/vsource.sym} 230 -780 0 0 {name=V0 value=0 savecurrent=false}
-C {devices/gnd.sym} 230 -710 0 0 {name=l3 lab=GND}
-C {devices/vsource.sym} 310 -780 0 0 {name=V6 value=1.8 savecurrent=false}
-C {devices/lab_wire.sym} 230 -850 0 0 {name=p3 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 310 -850 0 0 {name=p5 sig_type=std_logic lab=VDD}
-C {devices/isource.sym} -190 -790 0 0 {name=I0 value=\{i_in\}}
-C {devices/lab_wire.sym} -190 -860 0 0 {name=p15 sig_type=std_logic lab=VDD}
-C {devices/lab_wire.sym} 0 -620 2 1 {name=p1 sig_type=std_logic lab=VSS}
-C {devices/lab_wire.sym} 0 -840 0 0 {name=p2 sig_type=std_logic lab=VDD}
-C {vco.sym} 0 -740 0 0 {name=x1}
-C {devices/lab_wire.sym} 150 -800 0 1 {name=p8 sig_type=std_logic lab=Vp0}
-C {devices/lab_wire.sym} 150 -780 0 1 {name=p9 sig_type=std_logic lab=Vp1}
-C {devices/lab_wire.sym} 150 -760 0 1 {name=p10 sig_type=std_logic lab=Vp2}
-C {devices/lab_wire.sym} 150 -740 0 1 {name=p12 sig_type=std_logic lab=Vp3}
-C {devices/lab_wire.sym} 150 -720 0 1 {name=p14 sig_type=std_logic lab=Vn0}
-C {devices/lab_wire.sym} 150 -700 0 1 {name=p16 sig_type=std_logic lab=Vn1}
-C {devices/lab_wire.sym} 150 -680 0 1 {name=p17 sig_type=std_logic lab=Vn2}
-C {devices/lab_wire.sym} 150 -660 0 1 {name=p18 sig_type=std_logic lab=Vn3}
-C {devices/lab_wire.sym} -150 -720 2 1 {name=p4 sig_type=std_logic lab=VB_PFET}
-C {devices/lab_wire.sym} -190 -750 2 1 {name=p6 sig_type=std_logic lab=VB_NFET}
-C {devices/code_shown.sym} -270 -1000 0 0 {name=SETUP
+C {devices/vsource.sym} 180 -920 0 0 {name=V0 value=0 savecurrent=false}
+C {devices/gnd.sym} 180 -850 0 0 {name=l3 lab=GND}
+C {devices/vsource.sym} 260 -920 0 0 {name=V6 value=1.8 savecurrent=false}
+C {devices/lab_wire.sym} 180 -990 0 0 {name=p3 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} 260 -990 0 0 {name=p5 sig_type=std_logic lab=VDD}
+C {devices/isource.sym} -240 -930 0 0 {name=I0 value=\{i_in\}}
+C {devices/lab_wire.sym} -240 -1000 0 0 {name=p15 sig_type=std_logic lab=VDD}
+C {devices/lab_wire.sym} -50 -760 2 1 {name=p1 sig_type=std_logic lab=VSS}
+C {devices/lab_wire.sym} -50 -980 0 0 {name=p2 sig_type=std_logic lab=VDD}
+C {vco.sym} -50 -880 0 0 {name=x1}
+C {devices/lab_wire.sym} 100 -940 0 1 {name=p8 sig_type=std_logic lab=Vp0}
+C {devices/lab_wire.sym} 100 -920 0 1 {name=p9 sig_type=std_logic lab=Vp1}
+C {devices/lab_wire.sym} 100 -900 0 1 {name=p10 sig_type=std_logic lab=Vp2}
+C {devices/lab_wire.sym} 100 -880 0 1 {name=p12 sig_type=std_logic lab=Vp3}
+C {devices/lab_wire.sym} 100 -860 0 1 {name=p14 sig_type=std_logic lab=Vn0}
+C {devices/lab_wire.sym} 100 -840 0 1 {name=p16 sig_type=std_logic lab=Vn1}
+C {devices/lab_wire.sym} 100 -820 0 1 {name=p17 sig_type=std_logic lab=Vn2}
+C {devices/lab_wire.sym} 100 -800 0 1 {name=p18 sig_type=std_logic lab=Vn3}
+C {devices/lab_wire.sym} -200 -860 2 1 {name=p4 sig_type=std_logic lab=VB_PFET}
+C {devices/lab_wire.sym} -240 -890 2 1 {name=p6 sig_type=std_logic lab=VB_NFET}
+C {devices/code_shown.sym} 0 -620 0 0 {name=SETUP
 simulator=ngspice
 only_toplevel=false
 value="

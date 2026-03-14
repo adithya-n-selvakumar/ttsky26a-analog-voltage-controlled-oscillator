@@ -11,9 +11,7 @@ N -720 -1050 -720 -1030 {
 lab=#net1}
 N -720 -1050 -650 -1050 {
 lab=#net1}
-N -780 -950 -720 -950 {
-lab=#net2}
-N -720 -1010 -720 -950 {
+N -740 -1010 -740 -950 {
 lab=#net2}
 N -720 -1010 -650 -1010 {
 lab=#net2}
@@ -23,9 +21,7 @@ N -290 -1050 -290 -1030 {
 lab=#net3}
 N -290 -1050 -220 -1050 {
 lab=#net3}
-N -350 -950 -290 -950 {
-lab=#net4}
-N -290 -1010 -290 -950 {
+N -310 -1010 -310 -950 {
 lab=#net4}
 N -290 -1010 -220 -1010 {
 lab=#net4}
@@ -35,9 +31,7 @@ N 140 -1050 140 -1030 {
 lab=#net5}
 N 140 -1050 210 -1050 {
 lab=#net5}
-N 80 -950 140 -950 {
-lab=#net6}
-N 140 -1010 140 -950 {
+N 120 -1010 120 -950 {
 lab=#net6}
 N 140 -1010 210 -1010 {
 lab=#net6}
@@ -61,18 +55,24 @@ N 80 -930 80 -890 {
 lab=VN2}
 N 510 -930 510 -890 {
 lab=VN3}
-C {devices/iopin.sym} -300 -760 3 0 {name=p3 lab=VDD}
-C {devices/iopin.sym} -300 -640 1 0 {name=p15 lab=VSS}
-C {devices/ipin.sym} -380 -740 0 0 {name=p1 lab=VB_PFET}
-C {devices/ipin.sym} -380 -660 0 0 {name=p2 lab=VB_NFET}
-C {devices/opin.sym} -140 -740 0 0 {name=p45 lab=VP0}
-C {devices/opin.sym} -140 -710 0 0 {name=p46 lab=VP1}
-C {devices/opin.sym} -140 -680 0 0 {name=p47 lab=VP2}
-C {devices/opin.sym} -140 -650 0 0 {name=p48 lab=VP3}
-C {devices/opin.sym} -140 -600 0 0 {name=p61 lab=VN0}
-C {devices/opin.sym} -140 -570 0 0 {name=p62 lab=VN1}
-C {devices/opin.sym} -140 -540 0 0 {name=p63 lab=VN2}
-C {devices/opin.sym} -140 -510 0 0 {name=p64 lab=VN3}
+N -780 -950 -740 -950 {}
+N -740 -1010 -720 -1010 {}
+N -350 -950 -310 -950 {}
+N -310 -1010 -290 -1010 {}
+N 80 -950 120 -950 {}
+N 120 -1010 140 -1010 {}
+C {devices/iopin.sym} -1050 -1210 0 0 {name=p3 lab=VDD}
+C {devices/iopin.sym} -1050 -1170 0 0 {name=p15 lab=VSS}
+C {devices/ipin.sym} -1070 -1210 0 0 {name=p1 lab=VB_PFET}
+C {devices/ipin.sym} -1070 -1170 0 0 {name=p2 lab=VB_NFET}
+C {devices/opin.sym} -960 -1240 0 0 {name=p45 lab=VP0}
+C {devices/opin.sym} -960 -1210 0 0 {name=p46 lab=VP1}
+C {devices/opin.sym} -960 -1180 0 0 {name=p47 lab=VP2}
+C {devices/opin.sym} -960 -1150 0 0 {name=p48 lab=VP3}
+C {devices/opin.sym} -880 -1240 0 0 {name=p61 lab=VN0}
+C {devices/opin.sym} -880 -1210 0 0 {name=p62 lab=VN1}
+C {devices/opin.sym} -880 -1180 0 0 {name=p63 lab=VN2}
+C {devices/opin.sym} -880 -1150 0 0 {name=p64 lab=VN3}
 C {devices/lab_wire.sym} -70 -1080 0 0 {name=p16 sig_type=std_logic lab=VDD}
 C {devices/lab_wire.sym} 360 -900 2 1 {name=p29 sig_type=std_logic lab=VSS}
 C {devices/lab_wire.sym} 360 -1080 0 0 {name=p30 sig_type=std_logic lab=VDD}
