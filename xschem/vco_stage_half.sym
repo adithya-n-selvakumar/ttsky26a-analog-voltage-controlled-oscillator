@@ -1,0 +1,40 @@
+v {xschem version=3.4.5 file_version=1.2
+}
+G {}
+K {type=subcircuit
+format="@name @pinlist @symname"
+template="name=x1"
+}
+V {}
+S {}
+E {}
+L 4 -130 -30 130 -30 {}
+L 4 -130 30 130 30 {}
+L 4 -130 -30 -130 30 {}
+L 4 130 -30 130 30 {}
+L 4 -150 20 -130 20 {}
+L 4 -150 0 -130 0 {}
+L 4 130 -20 150 -20 {}
+L 4 -150 -20 -130 -20 {}
+L 4 130 0 150 0 {}
+L 4 130 20 150 20 {}
+L 7 0 -50 0 -30 {}
+L 7 0 30 0 50 {}
+B 5 -2.5 -52.5 2.5 -47.5 {name=VDD dir=inout}
+B 5 -2.5 47.5 2.5 52.5 {name=VSS dir=inout}
+B 5 -152.5 -22.5 -147.5 -17.5 {name=VIN_DIFF dir=in}
+B 5 -152.5 -2.5 -147.5 2.5 {name=VB_PFET dir=in}
+B 5 -152.5 17.5 -147.5 22.5 {name=VFB dir=in}
+B 5 147.5 -22.5 152.5 -17.5 {name=VOUT_DIFF dir=out}
+B 5 147.5 -2.5 152.5 2.5 {name=VDRAIN_TAIL dir=out}
+B 5 147.5 17.5 152.5 22.5 {name=VOUT_DIFF_BUF dir=out}
+T {@symname} -131 -56 0 0 0.3 0.3 {}
+T {@name} 85 -52 0 0 0.2 0.2 {}
+T {VDD} -4 -25 3 1 0.2 0.2 {}
+T {VFB} -125 16 0 0 0.2 0.2 {}
+T {VB_PFET} -125 -4 0 0 0.2 0.2 {}
+T {VOUT_DIFF} 125 -24 0 1 0.2 0.2 {}
+T {VIN_DIFF} -125 -24 0 0 0.2 0.2 {}
+T {VSS} 4 25 1 1 0.2 0.2 {}
+T {VDRAIN_TAIL} 125 -4 0 1 0.2 0.2 {}
+T {VOUT_DIFF_BUF} 125 16 0 1 0.2 0.2 {}
