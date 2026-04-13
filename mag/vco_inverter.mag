@@ -1,0 +1,40 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1776121282
+<< error_s >>
+rect 734 120 792 126
+rect 734 86 746 120
+rect 734 80 792 86
+rect 734 -208 792 -202
+rect 734 -242 746 -208
+rect 734 -248 792 -242
+rect 736 -532 794 -526
+rect 736 -566 748 -532
+rect 736 -572 794 -566
+rect 736 -842 794 -836
+rect 736 -876 748 -842
+rect 736 -882 794 -876
+<< metal1 >>
+rect 664 290 864 490
+rect 304 -486 504 -286
+rect 1024 -486 1224 -286
+rect 664 -1266 864 -1066
+use sky130_fd_pr__nfet_01v8_648S5X  XM1
+timestamp 1776117561
+transform 1 0 765 0 1 -704
+box -211 -310 211 310
+use sky130_fd_pr__pfet_01v8_XGS3BL  XM2
+timestamp 1776117561
+transform 1 0 763 0 1 -61
+box -211 -319 211 319
+<< labels >>
+flabel metal1 664 290 864 490 0 FreeSans 256 0 0 0 VDD
+port 0 nsew
+flabel metal1 664 -1266 864 -1066 0 FreeSans 256 0 0 0 VSS
+port 3 nsew
+flabel metal1 304 -486 504 -286 0 FreeSans 256 0 0 0 VIN_INV
+port 1 nsew
+flabel metal1 1024 -486 1224 -286 0 FreeSans 256 0 0 0 VOUT_INV
+port 2 nsew
+<< end >>

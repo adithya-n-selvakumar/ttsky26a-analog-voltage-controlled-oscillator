@@ -1,0 +1,78 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1776121282
+<< error_p >>
+rect 6810 -306 6868 -300
+rect 6810 -340 6822 -306
+rect 7712 -310 7770 -304
+rect 6810 -346 6868 -340
+rect 7712 -344 7724 -310
+rect 7712 -350 7770 -344
+rect 6810 -634 6868 -628
+rect 6810 -668 6822 -634
+rect 7712 -638 7770 -632
+rect 6810 -674 6868 -668
+rect 7712 -672 7724 -638
+rect 7712 -678 7770 -672
+rect 6812 -958 6870 -952
+rect 6812 -992 6824 -958
+rect 7714 -962 7772 -956
+rect 6812 -998 6870 -992
+rect 7714 -996 7726 -962
+rect 7714 -1002 7772 -996
+rect 6812 -1268 6870 -1262
+rect 6812 -1302 6824 -1268
+rect 7714 -1272 7772 -1266
+rect 6812 -1308 6870 -1302
+rect 7714 -1306 7726 -1272
+rect 7714 -1312 7772 -1306
+<< error_s >>
+rect 2634 -1164 2640 -326
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+rect 0 -1600 200 -1400
+rect 0 -2000 200 -1800
+rect 0 -2400 200 -2200
+rect 0 -2800 200 -2600
+use vco_buffer  x1
+timestamp 1776121282
+transform 1 0 5467 0 1 -528
+box 0 -1200 2743 592
+use sky130_fd_pr__nfet_01v8_XVWV9B  XM1
+timestamp 1776117561
+transform 1 0 1753 0 1 -1744
+box -625 -410 625 410
+use sky130_fd_pr__pfet_01v8_GJP7VV  XM3
+timestamp 1776117561
+transform 1 0 1761 0 1 -757
+box -625 -419 625 419
+use sky130_fd_pr__pfet_01v8_GJP7VV  XM7
+timestamp 1776117561
+transform 1 0 3259 0 1 -745
+box -625 -419 625 419
+use sky130_fd_pr__nfet_01v8_APRB2X  XM8
+timestamp 1776117561
+transform 1 0 3930 0 1 -2624
+box -1296 -1310 1296 1310
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 VSS
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 VIN_DIFF
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 VB_PFET
+port 3 nsew
+flabel metal1 0 -1600 200 -1400 0 FreeSans 256 0 0 0 VFB
+port 4 nsew
+flabel metal1 0 -2000 200 -1800 0 FreeSans 256 0 0 0 VOUT_DIFF
+port 5 nsew
+flabel metal1 0 -2400 200 -2200 0 FreeSans 256 0 0 0 VDRAIN_TAIL
+port 6 nsew
+flabel metal1 0 -2800 200 -2600 0 FreeSans 256 0 0 0 VOUT_DIFF_BUF
+port 7 nsew
+<< end >>

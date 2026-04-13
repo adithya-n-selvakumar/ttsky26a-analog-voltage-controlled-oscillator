@@ -1,0 +1,74 @@
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco.sch
+.subckt vco VDD VSS I_IN VP0 VP1 VP2 VP3 VN0 VN1 VN2 VN3 VB
+*.PININFO VDD:B VSS:B I_IN:I VP0:O VP1:O VP2:O VP3:O VN0:O VN1:O VN2:O VN3:O VB:O
+x1 VDD VSS I_IN VB vco_bias
+x6 VDD VSS VB I_IN VP0 VP1 VP2 VP3 VN0 VN1 VN2 VN3 vco_core
+.ends
+
+* expanding   symbol:  vco_bias.sym # of pins=4
+** sym_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_bias.sym
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_bias.sch
+.subckt vco_bias VDD VSS I_IN VB_PFET
+*.PININFO VDD:B VSS:B I_IN:I VB_PFET:O
+XM1 I_IN I_IN VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=2 m=1
+XM2 VB_PFET I_IN VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=2 m=1
+XM3 VB_PFET VB_PFET VDD VDD sky130_fd_pr__pfet_01v8 L=0.25 W=4 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  vco_core.sym # of pins=12
+** sym_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_core.sym
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_core.sch
+.subckt vco_core VDD VSS VB_PFET VB_NFET VP0 VP1 VP2 VP3 VN0 VN1 VN2 VN3
+*.PININFO VDD:B VSS:B VB_PFET:I VB_NFET:I VP0:O VP1:O VP2:O VP3:O VN0:O VN1:O VN2:O VN3:O
+x1 VDD VSS Vp Vn VB_PFET VB_NFET net1 net2 VP0 VN0 vco_stage
+x2 VDD VSS net1 net2 VB_PFET VB_NFET net3 net4 VP1 VN1 vco_stage
+x3 VDD VSS net3 net4 VB_PFET VB_NFET net5 net6 VP2 VN2 vco_stage
+x4 VDD VSS net5 net6 VB_PFET VB_NFET Vn Vp VP3 VN3 vco_stage
+.ends
+
+
+* expanding   symbol:  vco_stage.sym # of pins=10
+** sym_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_stage.sym
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_stage.sch
+.subckt vco_stage VDD VSS VIN_P VIN_N VB_PFET VB_NFET VOUT_P VOUT_N VOUT_P_BUF VOUT_N_BUF
+*.PININFO VDD:B VSS:B VIN_P:I VIN_N:I VB_PFET:I VB_NFET:I VOUT_P:O VOUT_N:O VOUT_P_BUF:O VOUT_N_BUF:O
+x1 VDD VSS VIN_P VB_PFET VOUT_N VOUT_P VDRAIN_M5 VOUT_P_BUF vco_stage_half
+x2 VDD VSS VIN_N VB_PFET VOUT_P VOUT_N VDRAIN_M5 VOUT_N_BUF vco_stage_half
+XM5 VDRAIN_M5 VB_NFET VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=2 m=1
+.ends
+
+
+* expanding   symbol:  vco_stage_half.sym # of pins=8
+** sym_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_stage_half.sym
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_stage_half.sch
+.subckt vco_stage_half VDD VSS VIN_DIFF VB_PFET VFB VOUT_DIFF VDRAIN_TAIL VOUT_DIFF_BUF
+*.PININFO VDD:B VSS:B VIN_DIFF:I VB_PFET:I VFB:I VOUT_DIFF:O VDRAIN_TAIL:O VOUT_DIFF_BUF:O
+XM7 VOUT_DIFF VFB VDD VDD sky130_fd_pr__pfet_01v8 L=2 W=4 nf=2 m=1
+XM3 VOUT_DIFF VB_PFET VDD VDD sky130_fd_pr__pfet_01v8 L=2 W=4 nf=2 m=1
+XM1 VOUT_DIFF VIN_DIFF VDRAIN_TAIL VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=2 m=1
+x1 VDD VSS VOUT_DIFF VOUT_DIFF_BUF vco_buffer
+XM8 VSS VOUT_DIFF VSS VSS sky130_fd_pr__nfet_01v8 L=11 W=11 nf=1 m=1
+.ends
+
+
+* expanding   symbol:  vco_buffer.sym # of pins=4
+** sym_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_buffer.sym
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_buffer.sch
+.subckt vco_buffer VDD VSS VIN_BUF VOUT_BUF
+*.PININFO VDD:B VSS:B VIN_BUF:I VOUT_BUF:O
+x1 VDD VIN_BUF INT_BUF VSS vco_inverter
+x2 VDD INT_BUF VOUT_BUF VSS vco_inverter
+.ends
+
+
+* expanding   symbol:  vco_inverter.sym # of pins=4
+** sym_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_inverter.sym
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_inverter.sch
+.subckt vco_inverter VDD VIN_INV VOUT_INV VSS
+*.PININFO VDD:B VSS:B VIN_INV:I VOUT_INV:O
+XM1 VOUT_INV VIN_INV VSS VSS sky130_fd_pr__nfet_01v8 L=0.15 W=1 nf=1 m=1
+XM2 VOUT_INV VIN_INV VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=1 nf=1 m=1
+.ends
+
+.end

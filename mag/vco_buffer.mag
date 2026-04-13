@@ -1,0 +1,52 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1776121282
+<< error_s >>
+rect 1343 222 1401 228
+rect 1343 188 1355 222
+rect 2245 218 2303 224
+rect 1343 182 1401 188
+rect 2245 184 2257 218
+rect 2245 178 2303 184
+rect 1343 -106 1401 -100
+rect 1343 -140 1355 -106
+rect 2245 -110 2303 -104
+rect 1343 -146 1401 -140
+rect 2245 -144 2257 -110
+rect 2245 -150 2303 -144
+rect 1345 -430 1403 -424
+rect 1345 -464 1357 -430
+rect 2247 -434 2305 -428
+rect 1345 -470 1403 -464
+rect 2247 -468 2259 -434
+rect 2247 -474 2305 -468
+rect 1345 -740 1403 -734
+rect 1345 -774 1357 -740
+rect 2247 -744 2305 -738
+rect 1345 -780 1403 -774
+rect 2247 -778 2259 -744
+rect 2247 -784 2305 -778
+<< metal1 >>
+rect 0 0 200 200
+rect 0 -400 200 -200
+rect 0 -800 200 -600
+rect 0 -1200 200 -1000
+use vco_inverter  x1
+timestamp 1776121282
+transform 1 0 609 0 1 102
+box 304 -1266 1224 490
+use vco_inverter  x2
+timestamp 1776121282
+transform 1 0 1511 0 1 98
+box 304 -1266 1224 490
+<< labels >>
+flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 VDD
+port 0 nsew
+flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 VSS
+port 1 nsew
+flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 VIN_BUF
+port 2 nsew
+flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 VOUT_BUF
+port 3 nsew
+<< end >>
