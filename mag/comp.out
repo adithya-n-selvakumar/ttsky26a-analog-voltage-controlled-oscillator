@@ -103,6 +103,37 @@ VSS                                        |VSS
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes vco_stage_half and vco_stage_half are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_XVWV9B in circuit vco_stage (0)(1 instance)
+
+Class vco_stage (0):  Merged 1 parallel devices.
+Subcircuit summary:
+Circuit 1: vco_stage                       |Circuit 2: vco_stage                       
+-------------------------------------------|-------------------------------------------
+vco_stage_half (2)                         |vco_stage_half (2)                         
+sky130_fd_pr__nfet_01v8 (2->1)             |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 11                         |Number of nets: 11                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_stage                       |Circuit 2: vco_stage                       
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+VIN_P                                      |VIN_P                                      
+VIN_N                                      |VIN_N                                      
+VOUT_P_BUF                                 |VOUT_P_BUF                                 
+VOUT_N_BUF                                 |VOUT_N_BUF                                 
+VB_NFET                                    |VB_NFET                                    
+VDD                                        |VDD                                        
+VB_PFET                                    |VB_PFET                                    
+VOUT_N                                     |VOUT_N                                     
+VOUT_P                                     |VOUT_P                                     
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_stage and vco_stage are equivalent.
 
 Final result: Circuits match uniquely.
 .
