@@ -1,12 +1,21 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1776206392
+timestamp 1776215850
 << metal1 >>
-rect 0 0 200 200
-rect 0 -400 200 -200
-rect 0 -800 200 -600
-rect 0 -1200 200 -1000
+rect 1226 572 1426 616
+rect 602 484 1638 572
+rect 1226 416 1426 484
+rect 288 -168 488 -106
+rect 2476 -168 2676 -104
+rect 288 -266 656 -168
+rect 1334 -266 1654 -168
+rect 2322 -266 2676 -168
+rect 288 -306 488 -266
+rect 2476 -304 2676 -266
+rect 1226 -880 1426 -788
+rect 602 -948 1642 -880
+rect 1226 -988 1426 -948
 use vco_inverter  x1
 timestamp 1776205063
 transform 1 0 528 0 1 96
@@ -16,12 +25,12 @@ timestamp 1776205063
 transform 1 0 1511 0 1 98
 box -2 -1084 926 520
 << labels >>
-flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 VDD
+flabel metal1 1226 416 1426 616 0 FreeSans 256 0 0 0 VDD
 port 0 nsew
-flabel metal1 0 -400 200 -200 0 FreeSans 256 0 0 0 VSS
+flabel metal1 1226 -988 1426 -788 0 FreeSans 256 0 0 0 VSS
 port 1 nsew
-flabel metal1 0 -800 200 -600 0 FreeSans 256 0 0 0 VIN_BUF
+flabel metal1 288 -306 488 -106 0 FreeSans 256 0 0 0 VIN_BUF
 port 2 nsew
-flabel metal1 0 -1200 200 -1000 0 FreeSans 256 0 0 0 VOUT_BUF
+flabel metal1 2476 -304 2676 -104 0 FreeSans 256 0 0 0 VOUT_BUF
 port 3 nsew
 << end >>

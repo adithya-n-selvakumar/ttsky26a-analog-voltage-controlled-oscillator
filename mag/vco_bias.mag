@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1776117561
+timestamp 1776222698
 << error_s >>
 rect 2533 -259 2591 -253
 rect 2533 -293 2545 -259
@@ -24,11 +24,11 @@ rect 0 -400 200 -200
 rect 0 -800 200 -600
 rect 0 -1200 200 -1000
 use sky130_fd_pr__nfet_01v8_XVWV9B  XM1
-timestamp 1776117561
+timestamp 1776222698
 transform 1 0 572 0 1 -843
 box -625 -410 625 410
 use sky130_fd_pr__nfet_01v8_XVWV9B  XM2
-timestamp 1776117561
+timestamp 1776222698
 transform 1 0 1769 0 1 -896
 box -625 -410 625 410
 use sky130_fd_pr__pfet_01v8_NDBSV3  XM3

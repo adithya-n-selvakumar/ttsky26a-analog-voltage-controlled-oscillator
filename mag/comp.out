@@ -52,5 +52,57 @@ VDD                                        |VDD
 Cell pin lists are equivalent.
 Device classes vco_inverter and vco_inverter are equivalent.
 
+Subcircuit summary:
+Circuit 1: vco_buffer                      |Circuit 2: vco_buffer                      
+-------------------------------------------|-------------------------------------------
+vco_inverter (2)                           |vco_inverter (2)                           
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 5                          |Number of nets: 5                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_buffer                      |Circuit 2: vco_buffer                      
+-------------------------------------------|-------------------------------------------
+VIN_BUF                                    |VIN_BUF                                    
+VOUT_BUF                                   |VOUT_BUF                                   
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_buffer and vco_buffer are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_XVWV9B in circuit vco_stage_half (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_GJP7VV in circuit vco_stage_half (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_APRB2X in circuit vco_stage_half (0)(1 instance)
+
+Class vco_stage_half (0):  Merged 3 parallel devices.
+Subcircuit summary:
+Circuit 1: vco_stage_half                  |Circuit 2: vco_stage_half                  
+-------------------------------------------|-------------------------------------------
+vco_buffer (1)                             |vco_buffer (1)                             
+sky130_fd_pr__nfet_01v8 (3->2)             |sky130_fd_pr__nfet_01v8 (2)                
+sky130_fd_pr__pfet_01v8 (4->2)             |sky130_fd_pr__pfet_01v8 (2)                
+Number of devices: 5                       |Number of devices: 5                       
+Number of nets: 8                          |Number of nets: 8                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_stage_half                  |Circuit 2: vco_stage_half                  
+-------------------------------------------|-------------------------------------------
+VFB                                        |VFB                                        
+VB_PFET                                    |VB_PFET                                    
+VIN_DIFF                                   |VIN_DIFF                                   
+VDRAIN_TAIL                                |VDRAIN_TAIL                                
+VOUT_DIFF_BUF                              |VOUT_DIFF_BUF                              
+VOUT_DIFF                                  |VOUT_DIFF                                  
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_stage_half and vco_stage_half are equivalent.
+
 Final result: Circuits match uniquely.
 .
