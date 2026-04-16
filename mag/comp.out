@@ -135,5 +135,33 @@ VOUT_P                                     |VOUT_P
 Cell pin lists are equivalent.
 Device classes vco_stage and vco_stage are equivalent.
 
+Subcircuit summary:
+Circuit 1: vco_core                        |Circuit 2: vco_core                        
+-------------------------------------------|-------------------------------------------
+vco_stage (4)                              |vco_stage (4)                              
+Number of devices: 4                       |Number of devices: 4                       
+Number of nets: 20                         |Number of nets: 20                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: vco_core                        |Circuit 2: vco_core                        
+-------------------------------------------|-------------------------------------------
+VP3                                        |VP3                                        
+VP1                                        |VP1                                        
+VP2                                        |VP2                                        
+VP0                                        |VP0                                        
+VN3                                        |VN3                                        
+VN1                                        |VN1                                        
+VN2                                        |VN2                                        
+VN0                                        |VN0                                        
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+VB_PFET                                    |VB_PFET                                    
+VB_NFET                                    |VB_NFET                                    
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes vco_core and vco_core are equivalent.
+
 Final result: Circuits match uniquely.
 .

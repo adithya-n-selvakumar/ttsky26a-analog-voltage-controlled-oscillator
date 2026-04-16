@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1776215850
+timestamp 1776370099
 << metal1 >>
 rect 1226 572 1426 616
 rect 602 484 1638 572
@@ -17,11 +17,11 @@ rect 1226 -880 1426 -788
 rect 602 -948 1642 -880
 rect 1226 -988 1426 -948
 use vco_inverter  x1
-timestamp 1776205063
+timestamp 1776370099
 transform 1 0 528 0 1 96
 box -2 -1084 926 520
 use vco_inverter  x2
-timestamp 1776205063
+timestamp 1776370099
 transform 1 0 1511 0 1 98
 box -2 -1084 926 520
 << labels >>

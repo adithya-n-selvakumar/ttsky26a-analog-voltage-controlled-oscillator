@@ -1,24 +1,14 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1776292449
+timestamp 1776370504
 << error_p >>
 rect -4968 36 -4910 42
 rect -4968 2 -4956 36
 rect -4968 0 -4910 2
-<< error_s >>
-rect -6375 -208 -6340 -174
-rect -6374 -227 -6340 -208
-rect -6355 -922 -6340 -227
-rect -6321 -261 -6286 -227
-rect -6321 -922 -6287 -261
-rect -5160 -685 -5107 -191
+rect -6355 -922 -6340 -685
+rect -6321 -922 -6287 -685
 rect -6321 -956 -6306 -922
-rect -5160 -975 -5090 -685
-rect -4968 -892 -4910 -886
-rect -4968 -926 -4956 -892
-rect -4968 -932 -4910 -926
-rect -5160 -1011 -5107 -975
 << metal1 >>
 rect 0 0 200 200
 rect 0 -400 200 -200
@@ -37,9 +27,9 @@ timestamp 1776222698
 transform 1 0 -7501 0 1 295
 box -53 -1359 2783 200
 use vco_core  x6
-timestamp 1776292449
+timestamp 1776370504
 transform 1 0 -9172 0 1 -2145
-box 0 -21111 13224 200
+box 400 -21878 14158 -1686
 << labels >>
 flabel metal1 0 0 200 200 0 FreeSans 256 0 0 0 VDD
 port 0 nsew
