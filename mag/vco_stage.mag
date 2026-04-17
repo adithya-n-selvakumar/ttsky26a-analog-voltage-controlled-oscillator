@@ -1,7 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1776370099
+timestamp 1776465419
 << viali >>
 rect 5162 -7062 5196 -6704
 rect 6306 -7064 6344 -6700
@@ -188,11 +188,11 @@ rect 5734 -6706 5778 -6554
 rect 5730 -6712 5782 -6706
 rect 5730 -6770 5782 -6764
 use vco_stage_half  x1
-timestamp 1776370099
+timestamp 1776465419
 transform 1 0 -244 0 1 2032
 box 1020 -3936 6282 14
 use vco_stage_half  x2
-timestamp 1776370099
+timestamp 1776465419
 transform 1 0 -244 0 1 -2552
 box 1020 -3936 6282 14
 use sky130_fd_pr__nfet_01v8_XVWV9B  XM5

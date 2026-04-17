@@ -1,0 +1,8 @@
+** sch_path: /home/ttuser/ttsky26a-analog-voltage-controlled-oscillator/xschem/vco_bias.sch
+.subckt vco_bias VDD VSS I_IN VB_PFET
+*.PININFO VDD:B VSS:B I_IN:I VB_PFET:O
+XM1 I_IN I_IN VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=2 m=1
+XM2 VB_PFET I_IN VSS VSS sky130_fd_pr__nfet_01v8 L=2 W=4 nf=2 m=1
+XM3 VB_PFET VB_PFET VDD VDD sky130_fd_pr__pfet_01v8 L=0.25 W=4 nf=1 m=1
+.ends
+.end
