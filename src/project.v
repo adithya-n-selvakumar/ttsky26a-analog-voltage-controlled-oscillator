@@ -1,11 +1,10 @@
 /*
- * Copyright (c) 2024 Your Name
+ * Copyright (c) 2024 Adithya Selvakumar
  * SPDX-License-Identifier: Apache-2.0
  */
-
 `default_nettype none
 
-module tt_um_example (
+module tt_um_adithya_selvakumar_vco (
     input  wire       VGND,
     input  wire       VDPWR,    // 1.8v power supply
 //    input  wire       VAPWR,    // 3.3v power supply
@@ -19,5 +18,39 @@ module tt_um_example (
     input  wire       clk,      // clock
     input  wire       rst_n     // reset_n - low to reset
 );
+
+    // Instantiate the VCO
+    vco vco (
+        .VDD(VDPWR),
+        .VSS(VGND),
+        .I_IN(ua[0]),
+        .VB(ua[1]),
+        .VP0(uo_out[0]),
+        .VN0(uo_out[1]),
+        .VP1(uo_out[2]),
+        .VN1(uo_out[3]),
+        .VP2(uo_out[4]),
+        .VN2(uo_out[5]),
+        .VP3(uo_out[6]),
+        .VN3(uo_out[7])
+    );
+
+    // Tie unused digital outputs to VGND
+    assign uio_out[0] = VGND;
+    assign uio_out[1] = VGND;
+    assign uio_out[2] = VGND;
+    assign uio_out[3] = VGND;
+    assign uio_out[4] = VGND;
+    assign uio_out[5] = VGND;
+    assign uio_out[6] = VGND;
+    assign uio_out[7] = VGND;
+    assign uio_oe[0] = VGND;
+    assign uio_oe[1] = VGND;
+    assign uio_oe[2] = VGND;
+    assign uio_oe[3] = VGND;
+    assign uio_oe[4] = VGND;
+    assign uio_oe[5] = VGND;
+    assign uio_oe[6] = VGND;
+    assign uio_oe[7] = VGND;
 
 endmodule
