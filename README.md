@@ -1,36 +1,47 @@
 ![](../../workflows/gds/badge.svg) ![](../../workflows/docs/badge.svg)
 
-# Tiny Tapeout Analog Project Template
+# 4-Stage Differential Ring VCO
 
-- [Read the documentation for project](docs/info.md)
+A current-controlled 4-stage differential ring voltage-controlled oscillator (VCO) implemented in the SkyWater SKY130A 130nm CMOS process for the Tiny Tapeout TTSKY26a shuttle.
 
-## What is Tiny Tapeout?
+- [Read the project documentation](docs/info.md)
 
-Tiny Tapeout is an educational project that aims to make it easier and cheaper than ever to get your digital designs manufactured on a real chip.
+## Design Overview
 
-To learn more and get started, visit https://tinytapeout.com.
+The VCO consists of a bias generator (`vco_bias`) and a 4-stage differential ring core (`vco_core`). Each stage contains a differential pair with PFET active loads, an NFET tail current source, a MOS capacitor, and a two-inverter output buffer. The fourth-to-first feedback connection swaps differential polarity, creating 5 total inversions to satisfy the Barkhausen oscillation condition (135° per stage). This topology produces 8 buffered quadrature outputs with 45° phase spacing.
 
-## Analog projects
+## Pinout
 
-For specifications and instructions, see the [analog specs page](https://tinytapeout.com/specs/analog/).
+| Pin | Signal | Description |
+|-----|--------|-------------|
+| ua[0] | I_IN | Control current input (analog) |
+| ua[1] | VB | Bias voltage monitor (analog) |
+| uo[0] | VP0 | Stage 0 positive output (buffered digital) |
+| uo[1] | VN0 | Stage 0 negative output (buffered digital) |
+| uo[2] | VP1 | Stage 1 positive output (buffered digital) |
+| uo[3] | VN1 | Stage 1 negative output (buffered digital) |
+| uo[4] | VP2 | Stage 2 positive output (buffered digital) |
+| uo[5] | VN2 | Stage 2 negative output (buffered digital) |
+| uo[6] | VP3 | Stage 3 positive output (buffered digital) |
+| uo[7] | VN3 | Stage 3 negative output (buffered digital) |
 
-## Enable GitHub actions to build the results page
+## How to Test
 
-- [Enabling GitHub Pages](https://tinytapeout.com/faq/#my-github-action-is-failing-on-the-pages-part)
+1. Apply 1.8V to VDPWR.
+2. Inject a control current into ua[0] (I_IN), starting around 1–10 µA.
+3. Observe oscillation on any digital output (uo[0]–uo[7]).
+4. Adjacent pairs (e.g., uo[0]/uo[1]) are complementary; successive pairs are 45° phase-shifted.
+5. Sweep the control current to characterize the tuning curve.
+6. Optionally monitor ua[1] (VB) to observe the internally generated bias voltage.
+
+## External Hardware
+
+- Current source or resistor network to inject control current into ua[0]
+- Oscilloscope or frequency counter to measure output frequency
 
 ## Resources
 
+- [Tiny Tapeout](https://tinytapeout.com)
+- [Analog specs](https://tinytapeout.com/specs/analog/)
 - [FAQ](https://tinytapeout.com/faq/)
-- [Digital design lessons](https://tinytapeout.com/digital_design/)
-- [Learn how semiconductors work](https://tinytapeout.com/siliwiz/)
 - [Join the community](https://tinytapeout.com/discord)
-
-## What next?
-
-- [Submit your design to the next shuttle](https://app.tinytapeout.com/).
-- Edit [this README](README.md) and explain your design, how it works, and how to test it.
-- Share your project on your social network of choice:
-  - LinkedIn [#tinytapeout](https://www.linkedin.com/search/results/content/?keywords=%23tinytapeout) [@TinyTapeout](https://www.linkedin.com/company/100708654/)
-  - Mastodon [#tinytapeout](https://chaos.social/tags/tinytapeout) [@matthewvenn](https://chaos.social/@matthewvenn)
-  - X (formerly Twitter) [#tinytapeout](https://twitter.com/hashtag/tinytapeout) [@tinytapeout](https://twitter.com/tinytapeout)
-  - Bluesky [@tinytapeout.com](https://bsky.app/profile/tinytapeout.com)
